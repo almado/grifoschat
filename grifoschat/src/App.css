@@ -26,6 +26,25 @@
   background-color: aliceblue;
 }
 
+.ballon-primary {
+  padding: 20px;
+  background-color: cadetblue;
+  text-align: right;
+  min-width: 120px;
+}
+
+.ballon-secondary {
+  padding: 20px;
+  background-color: aliceblue;
+  text-align: left;
+  min-width: 120px;
+}
+
+.chat-input {
+  width: 90%;
+  height: 120px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

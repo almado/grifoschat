@@ -38,12 +38,13 @@ class MessageSender extends Component {
                 <TextField
                     id="message"
                     label=""
-                    rows="6"
+                    rows={5}
+                    className="chat-input"
                     value={this.state.message}
                     onChange={this.handleChange('message')}
                     margin="normal"
                 />
-                <Button variant="fab" color="primary" onClick={this.sendMessage.bind(this)} >
+                <Button variant="fab" color="primary" onClick={this.sendMessage.bind(this)}>
                     <Icon>send</Icon>
                 </Button>
             </form>
