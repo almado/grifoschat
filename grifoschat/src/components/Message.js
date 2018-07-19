@@ -5,7 +5,7 @@ class Message extends Component {
   render(props) {
     return (
       <div>
-        testse
+        teste
       </div>
     );
   }
