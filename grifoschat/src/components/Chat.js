@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { List, ListItem, ListItemText, createGenerateClassName } from '@material-ui/core';
+import { List } from '@material-ui/core';
 import _ from 'lodash';
 import '../App.css';
 
 class Chat extends Component {
 
     getClass(message) {
-        console.log(message);
         return message.sender === "João" ? "ballon-primary" : "ballon-secondary";
     }
 
@@ -18,7 +17,7 @@ class Chat extends Component {
         this.props.messages.to.messages.map(msg => msgs.push(msg));
 
         msgs = _.sortBy(msgs, 'timestamp');
-        console.log(this.props, 'merged', msgs);
+        
         return (
             <List>
                 {msgs.map(message => (
@@ -27,9 +26,6 @@ class Chat extends Component {
                             <div className={this.getClass(message)}>
                                 {message.text}
                             </div>
-                            {/* <ListItem key={`item-${message.timestamp}`}>
-                                <ListItemText primary={message.text} className={this.getClass(message)} />
-                            </ListItem> */}
                         </ul>
                     </li>
                 ))}
